@@ -197,6 +197,11 @@ ul.rel li{font-style:italic}
 #npc-mob .small,#npc-cross .small{font-size:10.3pt!important;line-height:1.28}
 #npc-mob table{font-size:10.4pt!important}
 
+.journal{background:#f8f1df;border:1pt solid #c9b996;padding:4mm 6mm;box-shadow:1mm 1mm 0 rgba(0,0,0,.08);font-family:'Crimson Pro',serif;font-style:italic;font-size:11.4pt;line-height:1.45;color:#2b2218}
+.journal p{margin:0 0 2.6mm}
+.journal i{font-style:normal}
+.journal .jd{font-style:normal;font-family:Oswald,sans-serif;font-size:8pt;letter-spacing:.12em;text-transform:uppercase;color:#7a5a24;margin-right:1.6mm}
+
 .appx{font-size:10.6pt!important}
 .cmap{width:182mm;height:auto;display:block;margin:1mm 0 0}
 .cmap .nd{fill:#fffaf0;stroke:#1f1a15;stroke-width:.4}
@@ -321,6 +326,7 @@ body.present #present-x{display:block}
 <a class="si" href="#background" data-s="background">What Happened</a>
 <a class="si" href="#glance" data-s="glance">At a Glance</a>
 <a class="si" href="#truth" data-s="truth">Cross, Camera & Rite</a>
+<a class="si" href="#carcosa" data-s="carcosa">The Showman & Carcosa</a>
 <a class="si" href="#mechanism" data-s="mechanism">What Really Happened</a>
 <div class="grp">Run the game</div>
 <a class="si" href="#spine" data-s="spine">The Spine (start here)</a>
@@ -350,6 +356,7 @@ body.present #present-x{display:block}
 <a class="si" href="#pc-billy" data-s="pc-billy">PC · Billy Mulligan</a>
 <a class="si" href="#pc-vivienne" data-s="pc-vivienne">PC · Vivienne Ashcroft</a>
 <a class="si" href="#pc-thomas" data-s="pc-thomas">PC · Thomas Vale</a>
+<a class="si" href="#pell-journal" data-s="pell-journal">Pell's Journal (handout)</a>
   <div class="tools"><button id="present">Show to players</button><button id="reset">New session</button></div>
 </nav>
 <div id="scrim"></div>
@@ -372,28 +379,30 @@ body.present #present-x{display:block}
     <a href="#background"><span>What Happened (read first)</span><span>2</span></a>
     <a href="#glance"><span>At a Glance</span><span>3</span></a>
     <a href="#truth"><span>Cross, Camera &amp; Rite</span><span>4</span></a>
-    <a href="#mechanism"><span>What Really Happened</span><span>5</span></a>
-    <a href="#tracker"><span>Clocks &amp; Tracker</span><span>6</span></a>
-    <a href="#spine"><span>The Spine (start here)</span><span>7</span></a>
-    <a href="#opening"><span>Opening Scene</span><span>8</span></a>
-    <a href="#story"><span>The Story So Far (players)</span><span>9</span></a>
-    <a href="#moves"><span>Basic Moves (players)</span><span>10</span></a>
-    <a href="#pc-mercer"><span>PC · Jack Mercer</span><span>11</span></a>
-    <a href="#pc-billy"><span>PC · Billy Mulligan</span><span>12</span></a>
-    <a href="#pc-vivienne"><span>PC · Vivienne Ashcroft</span><span>13</span></a>
-    <a href="#pc-thomas"><span>PC · Thomas Vale</span><span>14</span></a>
-    <a href="#npc-cross"><span>NPCs · Cross &amp; Imperial</span><span>15</span></a>
-    <a href="#npc-lodge"><span>NPCs · The Lodge</span><span>16</span></a>
-    <a href="#npc-mob"><span>NPCs · Witnesses</span><span>17</span></a>
-    <a href="#scenes"><span>Scenes I</span><span>18</span></a>
-    <a href="#scenes2"><span>Scenes II</span><span>19</span></a>
-    <a href="#lodge"><span>Blackwater Lodge</span><span>20</span></a>
-    <a href="#clues"><span>Clue Web</span><span>21</span></a>
-    <a href="#finale"><span>Final Act &amp; Endings</span><span>22</span></a>
-  <a href="#clue-map"><span>Appendix · Clue Map</span><span>23</span></a>
-    <a href="#clue-sources"><span>Appendix · Clue Sources</span><span>24</span></a>
-    <a href="#npc-index"><span>Appendix · NPC Index</span><span>25</span></a>
-    <a href="#loc-index"><span>Appendix · Location Index</span><span>27</span></a>
+    <a href="#carcosa"><span>The Showman &amp; Carcosa</span><span>5</span></a>
+    <a href="#mechanism"><span>What Really Happened</span><span>6</span></a>
+    <a href="#tracker"><span>Clocks &amp; Tracker</span><span>7</span></a>
+    <a href="#spine"><span>The Spine (start here)</span><span>8</span></a>
+    <a href="#opening"><span>Opening Scene</span><span>9</span></a>
+    <a href="#story"><span>The Story So Far (players)</span><span>10</span></a>
+    <a href="#moves"><span>Basic Moves (players)</span><span>11</span></a>
+    <a href="#pc-mercer"><span>PC · Jack Mercer</span><span>12</span></a>
+    <a href="#pc-billy"><span>PC · Billy Mulligan</span><span>13</span></a>
+    <a href="#pc-vivienne"><span>PC · Vivienne Ashcroft</span><span>14</span></a>
+    <a href="#pc-thomas"><span>PC · Thomas Vale</span><span>15</span></a>
+    <a href="#pell-journal"><span>Pell's Journal (handout)</span><span>16</span></a>
+    <a href="#npc-cross"><span>NPCs · Cross &amp; Imperial</span><span>17</span></a>
+    <a href="#npc-lodge"><span>NPCs · The Lodge</span><span>18</span></a>
+    <a href="#npc-mob"><span>NPCs · Witnesses</span><span>19</span></a>
+    <a href="#scenes"><span>Scenes I</span><span>20</span></a>
+    <a href="#scenes2"><span>Scenes II</span><span>21</span></a>
+    <a href="#lodge"><span>Blackwater Lodge</span><span>22</span></a>
+    <a href="#clues"><span>Clue Web</span><span>23</span></a>
+    <a href="#finale"><span>Final Act &amp; Endings</span><span>24</span></a>
+  <a href="#clue-map"><span>Appendix · Clue Map</span><span>25</span></a>
+    <a href="#clue-sources"><span>Appendix · Clue Sources</span><span>26</span></a>
+    <a href="#npc-index"><span>Appendix · NPC Index</span><span>27</span></a>
+    <a href="#loc-index"><span>Appendix · Location Index</span><span>29</span></a>
   </nav>
   <div class="foot"><span>Mythos World rules · Portraits &amp; player sheets inside · Every name is a link</span><span>GM Edition</span></div>
 </section>
@@ -404,10 +413,10 @@ body.present #present-x{display:block}
   <h1>What Happened</h1>
   <div class="prose">
     <p class="dropcap">In the spring of 1914, a travelling showman vanished from a Marseille boarding house, leaving behind an unpaid bill, a wooden camera and a notebook. For years before that he had toured Europe with <i>exhibitions</i> of moving pictures; wherever he played, audiences rioted, wept, or walked into rivers. The camera and the notebook drifted east with the war's debris and ended up in the back room of a Cairo antiquities dealer.</p>
-    <p>That is where <a href="#npc-cross">Nathaniel Cross</a> found them in 1923, scouting locations for an Egyptian picture. Cross is a self-made man of the movies — nickelodeons, then features, now vice-president of production at <b>Imperial Pictures</b> — and a man with a weak heart and a large appetite. The camera's brass plate read <i>Exhibitions of the Last Sunset</i>. The notebook, <i>Le Masque du Dernier Couchant</i>, was translated for him by a Pasadena occultist, <a href="#npc-pell">Dr. Ignatius Pell</a>, and it promised Cross what his doctors could not: that whoever stages the Masque, and lets enough eyes see it, will take a seat “in the dark theatre that has no last reel.”</p>
+    <p>That is where <a href="#npc-cross">Nathaniel Cross</a> found them in 1923 — or believes he did. Cross is a self-made man of the movies — nickelodeons, then features, now vice-president of production at <b>Imperial Pictures</b> — and for thirty years he has been losing a war with his own body: disseminated sclerosis, sanatoria, radium water, mediums, and since 1923 a wheelchair. He was desperate enough to listen to a Pasadena occultist everyone else laughed at, <a href="#npc-pell">Dr. Ignatius Pell</a>, who had been hunting the camera for ten years and needed a rich man to fetch it; it was Pell who suggested Cairo for the location scouting. The camera's brass plate read <i>Exhibitions of the Last Sunset</i>. The notebook, <i>Le Masque du Dernier Couchant</i>, in Pell's translation, promised Cross what his doctors could not: that whoever stages the Masque, and lets enough eyes see it, will take a seat “in the dark theatre that has no last reel.”</p>
     <p>The rite is a sexual one. It needs masked celebrants, a west-facing room at sunset, and a <i>vessel</i> — a young woman who says yes, however that yes is obtained, without knowing what she is really giving. So Cross built the <b>Silver Circle</b>: rich and powerful men — producers, a senator, a bandleader — and the aspiring actresses that Imperial's studio cars deliver to them, promised screen tests and parts. Robes and Latin make it a secret society; cameras behind a curtain give Cross a hold over every man there. To the young women it is one more thing they are told is normal. Two earlier vessels fainted, then recovered. Cross needed a stronger one.</p>
     <p>Six weeks ago, <a href="#pc-vivienne">Vivienne Ashcroft</a> — a fading silent star who now manages young talent — got her best client a screen test for <i>Queen of the Nile</i>: <a href="#npc-evelyn">Evelyn Vale</a>, 22, from Dayton, Ohio, warm, ambitious and two small parts into a career. Evelyn tested in a <b>gold mask</b> from the costume department and didn't get the part. But Cross and Pell watched the test footage, and Pell had found his vessel. Soon a studio Lincoln, driven by <b>Earl Hooper</b>, was calling at Evelyn's bungalow: parties, people who matter, “a part in my next picture” — and <i>leave your agent out of it; agents only take ten per cent</i>. Vivienne knew none of it.</p>
-    <p>On <b>Saturday, June 5, 1926</b>, at sunset, Evelyn was led into the west salon wearing nothing but the gold mask from her screen test. Cameraman <a href="#npc-bell">Arthur Bell</a>, hired privately and paid by Cross himself, cranked the showman's camera. As the sun touched the sea, Evelyn went limp among the masked men — and through the warm, dark lens Bell watched her <i>still there</i>, among the masks, while her body lay slack on the cushions. The camera had taken her mind onto the film. Bell didn't understand what he had seen — only that it was wrong. In his panic he wrenched the camera open; the last roll tore and crumpled in the gate. He fled.</p>
+    <p>On <b>Saturday, June 5, 1926</b>, at sunset, Evelyn was led into the west salon wearing nothing but the gold mask from her screen test. Cameraman <a href="#npc-bell">Arthur Bell</a>, hired privately and paid by Cross himself, cranked the showman's camera. As the sun touched the sea, Evelyn went limp among the masked men — and through the warm, dark lens Bell watched her <i>still there</i>, among the masks, while her body lay slack on the cushions. The camera had opened a window, and her mind had gone through it. Bell didn't understand what he had seen — only that it was wrong. In his panic he wrenched the camera open; the last roll tore and crumpled in the gate. He fled.</p>
     <p>The next day he went to the only honest man he knew outside the studio: <a href="#pc-mercer">Jack Mercer</a>, the ex-cop turned private eye who, in 1924, had refused the studio's money over a set accident. Mercer smelled fear, took it for gin, and showed him the door; Bell left his card on the desk. On Tuesday night, on Cross's order, his hired muscle <a href="#npc-dugan">Frank Dugan</a>, an ex-deputy, ran Bell's roadster off Mulholland Drive, and Bell's house was quietly “burgled” the same night. A Police Commissioner on Cross's payroll closed the case by morning. Mercer never saw the three-line item in the papers.</p>
     <p>Evelyn's body — breathing, unresponsive — was driven by Hooper that same night to <a href="#lodge">Blackwater Lodge</a>, Cross's retreat in the San Bernardino Mountains, where <a href="#npc-whitcomb">Nurse Whitcomb</a> keeps it alive and Dugan keeps everyone else away. Cross does not fear her rescue. He fears her <b>death</b>: as long as Evelyn's body lives, every complete print of the film carries her, and whoever watches it to the end is pulled into her endless sunset orgy — and loses every restraint they had. If she dies, the film becomes only film.</p>
     <p>There are two films. The one the censors passed is <b>“Sunset Serenade”</b>, a harmless masquerade of veils and a waltz, shot on a sound stage; it will run before every showing of Imperial's million-dollar epic <i>Queen of the Nile</i>, and Kalb, Roth and the exchanges know nothing else. The other is Bell's raw footage of the Masque — and the rite demands it whole, every frame as the camera kept it. At the studio lab, negative cutter <a href="#npc-ruth">Ruth Abernathy</a> spent three nights on it: the last roll torn and crumpled where Bell had wrenched the camera open, and Pell demanding that not one frame be lost. She flattened, patched and re-perforated the damaged frames by hand under a magnifier, then inspected all twelve thousand frames of the reel, one by one, her job “and more” at stake. She never saw the film run — she saw all of it, frozen, one frame at a time; she is in a rest home now, painting sunsets on the wall with her fingers. Until Saturday night the raw negative and the work print stay at the mansion; after the Masque Pell carries the negative to the lab, where the night shift prints forty copies of a vice-president's “private test” without projecting a foot of it. On Sunday afternoon he and Hooper swap them into the <i>Queen of the Nile</i> cases. At <b>10 pm</b> the cases leave Central Station by express for film exchanges across the country. On <b>Friday, June 25</b>, the lights go down in forty cinemas.</p>
@@ -427,7 +436,7 @@ body.present #present-x{display:block}
   <div class="g-60-40">
     <div>
       <h2>Three Supernatural Facts</h2>
-      <p><span class="tag">The Camera</span> — Cross's eldritch camera captured Evelyn's mind on film at a masked rite. Her body lingers in a coma; <i>she</i> is in every frame.</p>
+      <p><span class="tag">The Camera</span> — Cross's eldritch camera opened a window at a masked rite, and Evelyn's mind went through. Her body lingers in a coma; every complete print looks onto where <i>she</i> is (see <a href="#carcosa">The Showman &amp; Carcosa</a>).</p>
       <p><span class="tag">The Film</span> — Anyone who watches a complete print of the real reel, uninterrupted, is drawn into the endless orgy of her sunset: erotic fixation, loss of all inhibition, violent obsession, psychic collapse. Every complete copy is lethal while Evelyn's body lives.</p>
       <p><span class="tag">The Ending</span> — Only two things break it: <b>Evelyn dies</b>, or <b>every copy is destroyed</b>. Nothing brings her back.</p>
       <h2>Five Revelations <span class="hint">— any sensible order</span></h2>
@@ -468,7 +477,7 @@ body.present #present-x{display:block}
   <div class="cols2">
     <div>
       <h2>Where the Camera Came From</h2>
-      <p>In 1923, scouting Cairo for an Egyptian picture, <a href="#npc-cross">Nathaniel Cross</a> bought a wooden camera from an antiquities dealer near the Khan el-Khalili. The dealer said it had belonged to a <b>travelling showman</b> who toured Europe before the Great War with “exhibitions” of moving pictures — exhibitions after which audiences rioted, wept or walked into rivers. The showman vanished in 1914.</p>
+      <p>In 1923, scouting Cairo for an Egyptian picture, <a href="#npc-cross">Nathaniel Cross</a> bought a wooden camera from an antiquities dealer near the Khan el-Khalili — the dealer Pell had spent ten years looking for. The dealer said it had belonged to a <b>travelling showman</b> who toured Europe before the Great War with “exhibitions” of moving pictures — exhibitions after which audiences rioted, wept or walked into rivers. The showman vanished in 1914.</p>
       <p>The camera looks like a 1910s hand-crank model, but its lens is ground from a dark, faintly warm glass, and its brass plate reads, in French, <i>Exhibitions of the Last Sunset</i>. <span class="tag">Overcome Fear</span> serious, if studied closely.</p>
       <h2>How Cross Knows the Rite</h2>
       <p>With the camera came the showman's leather notebook, <b>“Le Masque du Dernier Couchant”</b>. Occultist <a href="#npc-pell">Dr. Ignatius Pell</a> translated it for Cross. It prescribes:</p>
@@ -482,7 +491,7 @@ body.present #present-x{display:block}
     <div>
       <h2>Why Cross Does It</h2>
       <p><b>Public face:</b> a liberal aesthete who says taboo imprisons humanity. <b>In fact</b> a predator who has used his studio for years to feed powerful men young women — the films are his hold over them.</p>
-      <p><b>Real motive:</b> the notebook promises that when enough eyes have seen the sunset, <i>the Showman returns</i> — and the one who staged the Masque will take a seat “in the dark theatre that has no last reel.” Cross is 58, his heart is failing, and he believes this is immortality. Whether anything comes is the GM's secret; nothing has to.</p>
+      <p><b>Real motive:</b> Pell's translation promises that when enough eyes have seen the sunset, <i>the Showman returns</i> — and the one who staged the Masque will take a seat “in the dark theatre that has no last reel.” Cross is 58; disseminated sclerosis has kept him in a wheelchair since 1923, and the next years mean blindness, paralysis and a slow drowning in his own lungs. He doesn't fear death; he fears being locked in. A seat where the body doesn't matter is everything to him. What really waits: <a href="#carcosa">The Showman &amp; Carcosa</a>.</p>
       <h2>The Plan</h2>
       <table class="small">
         <tr><td class="k">The short</td><td><b>The decoy:</b> “Sunset Serenade”, an 11-minute masquerade of veils and a waltz, shot on a sound stage and passed by the censors. <b>The real reel:</b> Bell's raw Masque footage, uncut — every frame. Seen complete, it shows the viewer the whole orgy, and draws them in.</td></tr>
@@ -493,6 +502,43 @@ body.present #present-x{display:block}
         <tr><td class="k">His fear</td><td>Not her rescue — her <b>death</b>. A hospital might lose her; a grieving brother might grant mercy. So: guards, secrecy, a nurse who asks no questions.</td></tr>
         <tr><td class="k">His successor</td><td>If Cross dies, <a href="#npc-pell">Pell</a> sees the shipment through.</td></tr>
       </table>
+    </div>
+  </div>
+</section>
+<!-- ============ CARCOSA ============ -->
+<section class="page" id="carcosa">
+  <div class="kicker">GM Only · Never for the Players</div>
+  <h1>The Showman &amp; Carcosa</h1>
+  <p class="lead">The players will never need any of this. It is here so the Keeper knows what is behind the curtain — and can let it show at the edges. <b>Never name it at the table.</b></p>
+  <div class="cols2">
+    <div>
+      <h2>The Play</h2>
+      <p class="small"><i>The King in Yellow</i> is a play in two acts. The first is harmless. The second destroys whoever reads it. The first act ends at a <b>masquerade in Carcosa</b>, on the shore of Lake Hali, where at the hour the twin suns set behind the lake every guest must unmask. One guest, the Stranger, wears a pale mask — and it is no mask. <i>“You, sir, should unmask.” — “Indeed?” — “I wear no mask.”</i> What follows is the second act.</p>
+      <h2>The Showman</h2>
+      <p class="small">A French impresario who read the play in the 1890s and never came back from the second act. Since then he has been the King's showman — the Stranger's servant on this side. He wants the play performed, and the moving picture is the perfect stage: a book must be read, a film is <i>seen</i>, by hundreds at once, without anyone agreeing to it. His exhibitions before the war were rehearsals. Whoever saw one complete sat, for a moment, at the masquerade — and came back to riot, weep or walk into the river.</p>
+      <p class="small">In 1914 he vanished from Marseille. He did not lose the camera; he <b>left it behind</b> for the next impresario. <i>Le Masque du Dernier Couchant</i> is his staging script: how to film the masquerade of the first act so that the second begins <i>in the auditorium</i>.</p>
+      <h2>The Camera &amp; the Rite</h2>
+      <p class="small">The lens is ground from dark, warm glass from the shore of <b>Lake Hali</b>. It does not record; it <b>looks through</b>. The rite needs a west-facing room at the exact moment of sunset because the twin suns of Carcosa set behind the lake at the same moment — the two sunsets overlap, and the window opens. The “figures that weren't the guests” Bell saw are the court of Carcosa. Pell had the gold mask from Evelyn's screen test engraved with a sign from the notebook: a twisted golden glyph, the <b>Yellow Sign</b>.</p>
+    </div>
+    <div>
+      <h2>Evelyn &amp; the Windows</h2>
+      <p class="small">Evelyn's mind is not “on the film”. It is <b>at the masquerade</b>, in the role of <b>Cassilda</b>. Every complete copy is a <b>window</b> onto it; whoever watches to the end climbs through — and in Carcosa everyone unmasks, which is why viewers lose all restraint. Her living body holds her in the role and keeps the windows open.</p>
+      <table class="small">
+        <tr><td class="k">Mercy</td><td>Her body dies: the masquerade loses its Cassilda. She alone may take off her mask and leave. Every window shows an empty room — just film.</td></tr>
+        <tr><td class="k">Ashes</td><td>Every copy destroyed, the body lives: the windows close, but <b>she stays at the masquerade</b> — no audience, no way out, alone with the court — until the body dies a year later. A year in Carcosa may be longer than a year.</td></tr>
+      </table>
+      <p class="small">The clean, heroic ending condemns her; the darkest act is the only mercy. Only <a href="#npc-pell">Pell</a> knows — <a href="#pell-journal">his journal</a>, or Pell himself under pressure. If the players never find the journal, it reaches Mercer by mail a month later.</p>
+      <h2>Pell, the Believer</h2>
+      <p class="small"><b>1913, Marseille:</b> a young American student sees one of the Showman's last exhibitions. The hall riots; people wade into the harbour. Pell stays in his seat and weeps with happiness: he has seen the masquerade and come back. For ten years he hunts the Showman; in a Paris bookseller's back room he reads <b>Act I</b> and recognises the masquerade. He has never dared the second act — his one fear, greater than his fear of Cross.</p>
+      <p class="small"><b>1923:</b> he learns the camera is with a Cairo dealer. He has no money, no studio, no cinemas — so he finds a man who has all three and nothing left to lose: Cross, thirty years into his illness, newly in a wheelchair. Cross believes he found the camera. Pell led him to it. The “seat in the dark theatre” is Pell's translation, chosen for a dying man. What Pell wants: when enough eyes have seen the masquerade, the Showman returns — and names <b>Pell</b> his successor. In Carcosa, Cross will be one more spectator, unmasked.</p>
+      <h2>At the Table — Never Named</h2>
+      <ul class="small tight">
+        <li><b>Cassilda's Song</b> is the waltz Evelyn hums; Ruth sings it between fits: <i>“Along the shore the cloud waves break, / The twin suns sink behind the lake, / The shadows lengthen / In Carcosa.”</i></li>
+        <li><b>The Yellow Sign</b> on the gold mask, on the lab still, in the Masque footage.</li>
+        <li>At dusk in Evelyn's room the shadows fall the wrong way.</li>
+        <li>Pell's journal is a believer's diary, not a log.</li>
+        <li>Whether the Showman ever returns is the Keeper's to decide. The notebook promises it; Chambers would say the King doesn't need him.</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -517,7 +563,7 @@ body.present #present-x{display:block}
       <p><span class="tag">Anchor</span> — While Evelyn's body lives, every complete copy is potent. Her death makes all prints mundane instantly.</p>
       <p><span class="tag">Negatives</span> — Frames on a light table count as stills (moderate); a negative can't be “watched”. <span class="tag">Complete &amp; uninterrupted</span> — The rite must be seen whole, every frame as the camera kept it. A copy missing a single frame (any ordinary splice), a broken projection or a reel stopped midway is harmless; the decoy is just a film. (A PC who wants to know what's on the real reel: offer a few interrupted seconds, Overcome Fear serious.) Fragments and stills are unsettling, not lethal: <span class="tag">Overcome Fear</span> moderate. Nights of handling them, as Ruth did, wear a mind away piece by piece. Each time a still is viewed, Evelyn's face has turned a little further toward the camera.</p>
       <p><span class="tag">Full viewing</span> — Overcome Fear is not allowed: a permanent critical mental disorder (erotic fixation, compulsion to return to the sunset, catatonia). For a theatre audience: inhibitions collapse, then violence, fires, suicides — always off-screen.</p>
-      <p><span class="tag">Destroy every copy</span> — When the last complete copy burns (nitrate burns fast and hot) or loses a frame, the curse ends; Evelyn's mind burns with it. Her body lives on, empty.</p>
+      <p><span class="tag">Destroy every copy</span> — When the last complete copy burns (nitrate burns fast and hot) or loses a frame, the windows close and the curse ends — but Evelyn stays at the masquerade, alone, until her body dies. Her body lives on, empty.</p>
       <p><span class="tag">No cure</span> — There is no ritual of return. The notebook says so plainly: <i>“The vessel is spent.”</i></p>
     </div>
     <div>
@@ -680,7 +726,7 @@ body.present #present-x{display:block}
     <div>
       <h2>Who's Who</h2>
       <div class="who"><img class="portrait" src="img/evelyn_vale.jpg" alt="Evelyn Vale"><div><b>Evelyn Vale</b><br><span class="small">Starlet at Imperial Pictures. Bright, warm, ambitious — and gone.</span></div></div>
-      <div class="who"><img class="portrait" src="img/nathaniel_cross.jpg" alt="Nathaniel Cross"><div><b>Nathaniel Cross</b><br><span class="small">Vice-president of production at Imperial. Rich, charming, famous for lavish private parties at his Bel Air mansion. Produced <i>Queen of the Nile</i>.</span></div></div>
+      <div class="who"><img class="portrait" src="img/nathaniel_cross.jpg" alt="Nathaniel Cross"><div><b>Nathaniel Cross</b><br><span class="small">Vice-president of production at Imperial. Rich, charming, in a wheelchair since “an old polo injury”, famous for lavish private parties at his Bel Air mansion. Produced <i>Queen of the Nile</i>.</span></div></div>
       <p class="small"><b>Imperial Pictures</b> — a mid-sized Culver City studio run by <b>Morris Kalb</b>; its whole year rides on <i>Queen of the Nile</i>.</p>
       <h2>Where You Begin</h2>
       <p><b>Friday morning, June 18.</b> A fourth-floor office on Spring Street: <b>Jack Mercer, Private Investigations</b>. Evelyn's brother, <b>Thomas Vale</b>, and her agent, the silent star <b>Vivienne Ashcroft</b>, have come to hire a detective. Before noon, a reporter will be in the room too.</p>
@@ -866,6 +912,25 @@ body.present #present-x{display:block}
   </div>
 </section>
 
+<!-- ============ PELL'S JOURNAL ============ -->
+<section class="page" id="pell-journal">
+  <div class="kicker">Player Handout · Found at the Mansion — or in the Mail</div>
+  <h1>Pell's Journal</h1>
+  <p class="muted small">A cloth-bound notebook, the spine cracked, ink-stained at every edge. Excerpts.</p>
+  <div class="journal">
+    <p><span class="jd">Marseille, 11 March 1913.</span> They rose from their seats when the sun went down on the screen — rose and screamed and broke the doors, and some of them walked into the harbour still screaming. I did not move. I wept. I had seen the masquerade, and I came back. Why was I allowed to come back?</p>
+    <p><span class="jd">Paris, October 1919.</span> In the back room of a bookseller on the Rue de Seine, the play. I read the first act to the end — the masquerade, the pale mask, <i>“I wear no mask.”</i> I knew every face. I closed the book at the curtain. I have not dared the second. God forgive me, I want to.</p>
+    <p><span class="jd">Pasadena, 1922.</span> They laugh at me in the lecture halls. Let them. A dealer in the Khan el-Khalili has a wooden camera with a brass plate. I cannot buy it. I cannot use it. I need a man who has money, a studio, cinemas — and nothing left to lose.</p>
+    <p><span class="jd">Bel Air, 1923.</span> Found him. N.C. — thirty years in the dark of his own body, and now the chair. He listened to the end. No one else ever has. I have rendered <i>la salle obscure qui n'a pas de dernière bobine</i> for him as a promise. He wept when he read it. Let him.</p>
+    <p><span class="jd">1925.</span> The second vessel fainted like the first and woke asking for water. Too weak. The sunset would not hold her.</p>
+    <p><span class="jd">April 1926.</span> The screen test. Miss V. in the gold mask, looking into the lens as if she already knew it. Cassilda. I had the Sign engraved on the mask that same night.</p>
+    <p><span class="jd">5 June.</span> The sunset held. She went through. The cameraman ran — and tore the last roll in the gate, the fool. Every frame must be saved. Every one.</p>
+    <p><span class="jd">10 June.</span> The cutter is failing. She looks too long. I told her: not one frame.</p>
+    <p><span class="jd">14 June.</span> V. hums at dusk again. The sunset holds.</p>
+    <p><span class="jd">15 June.</span> The notebook is plain on this, though I have not told N.C.: <i>if the windows close while the vessel breathes, she is left alone at the feast. Only the vessel's end releases her.</i> I have not told him much.</p>
+    <p><span class="jd">17 June.</span> Forty windows. Forty cities. When enough eyes have seen, He will come back for the play, and someone must take up the camera. N.C. will have his seat. I will have the stage.</p>
+  </div>
+</section>
 <!-- ============ GM BACK ============ -->
 <section class="page dense" id="npc-cross">
   <div class="kicker">07 · Cast · Cross &amp; Imperial Pictures</div>
@@ -877,12 +942,13 @@ body.present #present-x{display:block}
       <div class="npc-name">Nathaniel Cross</div>
       <div class="npc-role">Vice-president of production, Imperial Pictures · Leader of the Silver Circle</div>
       <dl class="dl">
-        <dt>Wants</dt><dd>The short in 40 cinemas; his seat “in the dark theatre” before his heart gives out.</dd>
-        <dt>Fears</dt><dd>Evelyn's death. The shipment stopping. Kalb finding out.</dd>
+        <dt>Wants</dt><dd>The short in 40 cinemas; his seat “in the dark theatre” before his body locks him in completely.</dd>
+        <dt>Fears</dt><dd>Evelyn's death. The shipment stopping. Being seen weak.</dd>
         <dt>Method</dt><dd>Courtesy, money, lawyers, and the Circle's films as a hold over powerful men. Violence only through others (<a href="#tracker">Amber Clock</a>).</dd>
         <dt>Bribes</dt><dd>Mercer: studio security contract · Billy: an exclusive and a staff job · Vivienne: a comeback part, and a contract for her next client · Thomas: “the best doctors” and a cheque · Eddie Kaplan: camera operator, if he forgets Bell.</dd>
         <dt>Tell</dt><dd>Once he thinks they can't stop it, he gloats: <i>“She isn't in a coma, Mr. Vale. She's in the picture. Burn the picture and you burn your sister.”</i> (<a href="#c08">clue 08</a>) <b>Guarantee it:</b> the first time the PCs threaten Evelyn's body or the shipment, he telephones Thomas and says it.</dd>
-        <dt>Voice</dt><dd class="voice">Soft, amused, cigarette in hand, hand often on his chest.</dd>
+        <dt>Voice</dt><dd class="voice">Soft, amused, slurring when tired. Dark glasses indoors — light hurts him. A blanket over his knees in June.</dd>
+        <dt>Body</dt><dd>Wheelchair since 1923 (“an old polo injury”, says the studio). Hooper pushes and drives him. His hand shakes when he reaches for a glass; he waits until nobody is looking. On bad days a tray of belladonna and bromide sits beside him. He never threatens anyone with his own hands — and players underestimate him for it.</dd>
       </dl>
     </div>
   </div>
@@ -898,7 +964,7 @@ body.present #present-x{display:block}
     <div>
       <div class="npc mini" id="npc-pell"><div class="ph">IP</div><div>
         <div class="npc-name" style="font-size:11pt">Dr. Ignatius Pell</div><div class="npc-role">Occultist · Cross's translator &amp; successor</div>
-        <p class="small">Thin, eager, ink-stained cuffs; lodges at the mansion. Knows everything and <i>wants to be asked</i>. Carries the negative to the lab after the Masque and runs the swap himself. <b>Leverage:</b> vanity, and terror of Cross. If Cross dies, Pell runs the shipment.</p>
+        <p class="small">Thin, eager, ink-stained cuffs; lodges at the mansion. <b>The real believer:</b> saw the Showman's last exhibition in 1913 and led Cross to the camera; Cross is his means. Knows everything and <i>wants to be asked</i>. Carries the negative to the lab after the Masque and runs the swap himself. <b>Leverage:</b> vanity; terror of Cross; above all, the second act (see <a href="#carcosa">Carcosa</a>). If Cross dies, Pell runs the shipment — relieved.</p>
       </div></div>
       <div class="npc mini" id="npc-roth"><div class="ph">SR</div><div>
         <div class="npc-name" style="font-size:11pt">Samuel Roth</div><div class="npc-role">Publicity chief</div>
@@ -921,7 +987,7 @@ body.present #present-x{display:block}
       <div class="box small"><b>Silver Circle members</b> (Vivienne knows their faces from society pages, not what they do here): Delphine Kalb · State Senator Harlan Pryce · bandleader Teddy Marsh · Dr. Pell (inner circle).</div>
     </div>
   </div>
-  <div class="box red small"><b>Names for improvised NPCs:</b> Rosa Delgado (Evelyn's landlady) · Harold Finch (lab supervisor) · Mabel Stokes (maid at the mansion; can open the service door) · Earl Hooper (Imperial motor-pool driver assigned to Cross; drove Evelyn to the party and that night to the lodge; Rosa's flirt; drives Pell to the lab on Saturday night and on Sunday; talks for money, from fear of a kidnapping charge, or from conscience; found in the studio garage) · Gus Varga (depot clerk).</div>
+  <div class="box red small"><b>Names for improvised NPCs:</b> Rosa Delgado (Evelyn's landlady) · Harold Finch (lab supervisor) · Mabel Stokes (maid at the mansion; can open the service door) · Earl Hooper (Imperial motor-pool driver assigned to Cross — his driver and his legs: pushes the chair, lifts him into the Lincoln; drove Evelyn to the party and that night to the lodge; Rosa's flirt; drives Pell to the lab on Saturday night and on Sunday; talks for money, from fear of a kidnapping charge, or from conscience; found in the studio garage) · Gus Varga (depot clerk).</div>
   <h2 id="asking-malloy">Asking Malloy <span class="hint">— Friend of Law Enforcement: police information instead of a Search roll</span></h2>
   <p class="small"><b>His warning call</b> comes the evening the PCs start asking about Bell: <i>“Drop Bell, Jack. Brannigan closed it personally.”</i> Quieter: <i>“Not on the phone. Lunch counter on Main, nine o'clock.”</i></p>
   <table class="small">
@@ -945,8 +1011,8 @@ body.present #present-x{display:block}
       <div class="npc-role">Starlet · Victim · Cannot be saved</div>
       <dl class="dl">
         <dt>Who</dt><dd>Ambitious, warm, 22. Courted by Cross after a failed screen test — parties, promises, “leave your agent out of it”. Wrote home every Sunday.</dd>
-        <dt>Now</dt><dd>Her body breathes at <a href="#lodge">Blackwater Lodge</a>. Her mind is still in the Masque — an endless sunset revel among masks that are not human — in every frame of the film.</dd>
-        <dt>Signs</dt><dd>Her eyelids flutter at dusk. A still of her face turns toward whoever looks at it. Thomas's photograph of her, left near the film cans, seems faded.</dd>
+        <dt>Now</dt><dd>Her body breathes at <a href="#lodge">Blackwater Lodge</a>. Her mind is at the masquerade in Carcosa, in the role of Cassilda — every complete print a window onto it (see <a href="#carcosa">Carcosa</a>).</dd>
+        <dt>Signs</dt><dd>Her eyelids flutter at dusk; the waltz she hums is Cassilda's Song; the shadows in her room fall the wrong way, as if two suns were setting. A still of her face turns toward whoever looks at it. Thomas's photograph of her, left near the film cans, seems faded.</dd>
         <dt>Show her</dt><dd>Fan letters, the gown laid out, Thomas's stories, Vivienne's memories — make the table care before the bedside.</dd>
         <dt>Fate</dt><dd>She never wakes. See <a href="#endings">endings</a>.</dd>
       </dl>
@@ -976,7 +1042,7 @@ body.present #present-x{display:block}
       <li><b>Put someone on the spot:</b> it should be a choice made at the bedside, ideally with Thomas present or deliberately kept away.</li>
       <li><b>No roll</b> to do it to a helpless body — but whoever does it must <b>Overcome Fear (serious)</b>; Thomas, if he learns of it unasked, must too.</li>
       <li><b>Obstacles:</b> Dugan's orders (deadly force), Whitcomb (“not while I'm on duty” — unless turned), Thomas himself.</li>
-      <li><b>Show it worked:</b> at that moment Ruth falls still, the lab stills fade to grey, Cross clutches his chest.</li>
+      <li><b>Show it worked:</b> at that moment Ruth falls still, the lab stills fade to grey, Cross, in Bel Air, takes off his dark glasses and looks into the light — for one moment it doesn't hurt.</li>
       <li><b>Never the only road</b> before Sunday 10 pm: burning every copy also works.</li>
       <li><b>In a city hospital:</b> a death on the ward is examined. Whitcomb (if turned) can sign “heart failure”. Otherwise the police come — and Bentham buries it, because Cross wants no inquest either.</li>
     </ul>
@@ -996,13 +1062,14 @@ body.present #present-x{display:block}
   </div></div>
   <div class="npc mini" id="npc-ruth" style="grid-template-columns:24mm 1fr"><div class="ph" style="height:26mm">RA</div><div>
     <div class="npc-name">Ruth Abernathy</div><div class="npc-role">Negative cutter · committed to Mount Calvary Rest Home</div>
-    <p class="small">Three nights under a magnifier: flattening, patching and re-perforating the frames Bell tore when he wrenched the camera open, then inspecting all twelve thousand frames, one by one — not one may be lost, Pell at her shoulder, her job “and more” at stake. She never saw the film run; she saw every frame of it. Tears at her nightgown and paints sunsets on the wall with her fingers. <span class="tag">Overcome Fear</span> moderate. Between fits: <i>“She's in every frame. Burn them all — all of them — or they never let her go. She can't come back, she's spent, she's spent. Not a frame lost, he said. Not one. I looked at every one of them. Every one.”</i></p>
+    <p class="small">Three nights under a magnifier: flattening, patching and re-perforating the frames Bell tore when he wrenched the camera open, then inspecting all twelve thousand frames, one by one — not one may be lost, Pell at her shoulder, her job “and more” at stake. She never saw the film run; she saw every frame of it. Tears at her nightgown and paints sunsets on the wall with her fingers. <span class="tag">Overcome Fear</span> moderate. Between fits: <i>“She's in every frame. Burn them all — all of them — or they never stop watching her. She can't come back, she's spent, she's spent. <i>Along the shore the cloud waves break…</i> Not a frame lost, he said. Not one. I looked at every one of them. Every one.”</i></p>
   </div></div>
   <h2>Getting the Truth out of Pell</h2>
   <table>
     <tr><td class="k" style="width:30mm">Flattery</td><td>As a fellow scholar: he explains the rite and the showman (<a href="#c05">05</a>); <b>Detect Truth</b> shows he fears Cross.</td></tr>
     <tr><td class="k">Leverage</td><td><b>Convince</b> with fear of Cross, the police or Kalb: he confirms the anchor (<a href="#c08">08</a>) and where the copies are — but warns Cross before dawn on a 7–9.</td></tr>
-    <tr><td class="k">If Cross is dead</td><td>Pell is in charge, frightened and fanatical; he brings the swap forward to Sunday noon (Red +1).</td></tr>
+    <tr><td class="k">The second act</td><td>Threaten to make him read it — or show you know he never dared: he breaks and tells everything, the believer's secret included (Overcome Fear for whoever holds the page).</td></tr>
+    <tr><td class="k">If Cross is dead</td><td>Pell is in charge, relieved and fanatical; he brings the swap forward to Sunday noon (Red +1).</td></tr>
   </table>
 </section>
 <section class="page scenes" id="scenes">
@@ -1035,7 +1102,7 @@ body.present #present-x{display:block}
     <p><span class="tag">On arrival</span> Night shift. Drying racks of release prints, the smell of acetone and silver; a red lamp over the vault door.</p>
     <p><span class="tag">Who wants what</span> <b>Harold Finch</b>, supervisor, wants the rush job done by Sunday and no questions about Ruth, who “went home sick” — or about the key Mr. Pell borrows on Saturday night. He's frightened of what's in that vault; a Police Bribe or the threat of Kalb finding out loosens him.</p>
     <p><span class="tag">Ask</span> <i>Eddie can get you in through the drying room, but he's shaking. Who goes in with him, and who keeps Finch talking?</i></p>
-    <p><span class="tag">Find</span> Ledger: 40 prints <i>Sunset Serenade</i> with <i>Queen of the Nile</i>, 1 work print “to N. Cross, residence” — and, for Saturday night, <b>“40 test prints · N.C. private · hold for collection”</b> (<a href='#c09'>09</a>) · a monthly cheque to <b>Mount Calvary Rest Home</b> (<a href='#sc-sanatorium'>→ Ruth</a>) · shipping note: “cans to Central Station, S.P. express, <b>Sun 10 pm</b>” (<a href='#c10'>10</a>) · in Ruth's trim bin, a frame of Evelyn in the gold mask, surrounded by masked men (<a href='#c07'>07</a>); Overcome Fear moderate. <i>Vivienne: it's the mask from Evelyn's screen test.</i> · on the racks, the decoys: veils and a waltz, nothing else — the censors' film.</p>
+    <p><span class="tag">Find</span> Ledger: 40 prints <i>Sunset Serenade</i> with <i>Queen of the Nile</i>, 1 work print “to N. Cross, residence” — and, for Saturday night, <b>“40 test prints · N.C. private · hold for collection”</b> (<a href='#c09'>09</a>) · a monthly cheque to <b>Mount Calvary Rest Home</b> (<a href='#sc-sanatorium'>→ Ruth</a>) · shipping note: “cans to Central Station, S.P. express, <b>Sun 10 pm</b>” (<a href='#c10'>10</a>) · in Ruth's trim bin, a frame of Evelyn in the gold mask — a twisted golden sign engraved on its brow — surrounded by masked men (<a href='#c07'>07</a>); Overcome Fear moderate. <i>Vivienne: it's the mask from Evelyn's screen test.</i> · on the racks, the decoys: veils and a waltz, nothing else — the censors' film.</p>
     <p><span class="tag">If they dither</span> Nitrate is lethal: any open flame risks a vault fire that takes the decoys — and maybe a PC (serious injury). Security arrives in minutes.</p>
   </div>
   <div class="scene" id="sc-sanatorium">
@@ -1058,10 +1125,10 @@ body.present #present-x{display:block}
   <div>
   <div class="scene" id="sc-mansion-day">
     <div class="sch"><span class="npc-name">Cross's Mansion — By Day</span><span class="when">Fri evening or Sat noon · Bel Air</span></div>
-    <p><span class="tag">On arrival</span> Amber 1: Cross receives them for “a frank talk”. A butler, palms, Pell reading in the library, a locked door at the end of the west wing. Mabel the maid clears the glasses and won't meet anyone's eye.</p>
+    <p><span class="tag">On arrival</span> Amber 1: Cross receives them for “a frank talk” — from his wheelchair, dark glasses on, Hooper behind him. A butler, palms, Pell reading in the library, a locked door at the end of the west wing. Mabel the maid clears the glasses and won't meet anyone's eye.</p>
     <p><span class="tag">Who wants what</span> <b>Cross</b> wants to measure them and buy them; <b>Pell</b> wants to be asked something clever; <b>Mabel</b> wants to stop being part of it.</p>
     <p><span class="tag">Ask</span> <i>Cross pours drinks and makes each of you an offer. Who is tempted — and who notices how Mabel looks at the west door?</i></p>
-    <p><span class="tag">Find</span> In the household office (Mabel knows it; Defy Danger to slip in): the <b>telephone bill</b> — a long-distance call to <b>Big Bear Lake 14</b> every evening at 7 (<a href='#c06'>06</a>) · in Pell's room, his journal: “V. hums at dusk again. The sunset holds.” · Mabel, alone: the service door, the hat-box under the projector, the young women who leave at dawn (<a href='#c04'>04</a>) — and, on Sunday morning, she heard Pell tell Hooper: “The lab at four on Sunday” (<a href='#c10'>10</a>).</p>
+    <p><span class="tag">Find</span> In the household office (Mabel knows it; Defy Danger to slip in): the <b>telephone bill</b> — a long-distance call to <b>Big Bear Lake 14</b> every evening at 7 (<a href='#c06'>06</a>) · in Pell's room, his journal (<a href="#pell-journal">handout</a>): “V. hums at dusk again. The sunset holds.” — and, further back: <i>“If the windows close while the vessel breathes, she is left alone at the feast. Only the vessel's end releases her.”</i> (Detect Truth on Pell gets the same.) · Mabel, alone: the service door, the hat-box under the projector, the young women who leave at dawn (<a href='#c04'>04</a>) — and, on Sunday morning, she heard Pell tell Hooper: “The lab at four on Sunday” (<a href='#c10'>10</a>).</p>
     <p><span class="tag">If they dither</span> Cross ends the visit with the trap: <i>“Come to the party — tonight, if it's Saturday — and see how harmless we are. Bring your friends.”</i> At Amber 3 or higher the invitation becomes a negotiation: <i>“Bring what you took, and we'll settle this like civilised people.”</i> He still wants them on camera.</p>
   </div>
   <div class="scene" id="sc-mansion">
@@ -1140,7 +1207,7 @@ body.present #present-x{display:block}
       <p class="small"><span class="tag">Force</span> Outmanoeuvre or confront armed guards. <b>Make the danger plain before guns come out.</b></p>
       <div class="box red">
         <h3>At the Bedside</h3>
-        <p class="small" style="margin:0">Evelyn breathes; at dusk her eyelids flutter and she hums a waltz. Thomas can hold her hand; nothing happens. A pillow lies on the chair. <i>Put someone on the spot: mercy, rescue, or walk away?</i></p>
+        <p class="small" style="margin:0">Evelyn breathes; at dusk her eyelids flutter and she hums a waltz; the shadows in the room fall the wrong way. Thomas can hold her hand; nothing happens. A pillow lies on the chair. <i>Put someone on the spot: mercy, rescue, or walk away?</i></p>
       </div>
       <div class="box small"><b>Taking her away</b> (hospital, Thomas's custody) denies Cross his anchor's safety but doesn't break the curse. <b>Killing her</b> does — instantly, everywhere.</div>
       <div class="box red small" id="taking-evelyn"><h3>If the PCs take Evelyn</h3>
@@ -1212,26 +1279,34 @@ body.present #present-x{display:block}
   <h2 id="endgame">Endgame Choices &amp; Costs</h2>
   <table>
     <tr><th style="width:62mm">PC action</th><th>Effect</th></tr>
-    <tr><td class="k">Destroy every copy (by Sun 10 pm)</td><td>No catastrophe. Evelyn's mind burns with the film; her body lives on, empty.</td></tr>
+    <tr><td class="k">Destroy every copy (by Sun 10 pm)</td><td>No catastrophe. The windows close; Evelyn's body lives on, empty — and she stays at the masquerade until it dies.</td></tr>
     <tr><td class="k">Destroy most copies</td><td>Every surviving complete copy is still lethal. Hunt the rest — or accept it.</td></tr>
     <tr><td class="k">Burn the decoys</td><td>Nothing. They are just film; never tick them.</td></tr>
     <tr><td class="k">Cut a frame from a copy</td><td>Any splice that loses a frame makes that copy harmless — quiet, no fire, and the rest of the reel survives as evidence. At the depot it takes as long as burning: every case must still be opened.</td></tr>
-    <tr><td class="k">Kill Evelyn</td><td>All prints become harmless at once, even after the train has left. Never required, never easy.</td></tr>
+    <tr><td class="k">Kill Evelyn</td><td>All prints become harmless at once, even after the train has left — and it releases her. Never required, never easy.</td></tr>
     <tr><td class="k">Kill or expose Cross only</td><td>Pell runs the swap. Kalb, Convinced with proof, can block it.</td></tr>
     <tr class="danger"><td class="k">Train leaves, Evelyn lives</td><td>Opening night in 40 cinemas — unless Kalb recalls them (below).</td></tr>
   </table>
   <div class="box small" id="after-train"><b>After the train.</b> Malloy can't stop an interstate express without a federal warrant; a car can't catch it. Only <a href="#npc-kalb">Kalb</a> can wire the exchanges to return the short — and only if <b>Convinced</b> with proof (after a depot fire he believes nothing at first). 10+: all but 1d3 cans recalled · 7–9: all but 2d6. Every can that slips through is one cinema. Only Evelyn's death makes them all harmless.</div>
   <h2 id="endings">Ending Images</h2>
+
+  <div class="box small" style="margin-top:3mm"><b>Pell's journal, a month later.</b> Found at the mansion (Pell's room) or prised from Pell. <b>If the players never find it</b>, Mercer receives it in the mail a month after the events — no sender, a Marseille stamp on the wrapping. Pell sent it: a believer wants to be read. Add the last page that fits the ending:
+    <ul class="small tight" style="margin:1mm 0 0">
+      <li><b>Ashes:</b> <i>“They closed the windows. She is alone at the feast now, and will be until her heart stops. Someone ought to know that, Mr. Mercer. — I. P.”</i></li>
+      <li><b>Mercy:</b> <i>“She took off her mask and left. I envy her. I am looking for another camera. — I. P.”</i></li>
+      <li><b>Opening Night:</b> <i>“Forty cities. I am told the house in Peoria never emptied. — I. P.”</i></li>
+    </ul>
+  </div>
   <div class="cols3">
-    <div class="box"><h3>Ashes</h3><p class="small" style="margin:0">Every can burned. Evelyn is moved to a sanatorium; Thomas reads her letters aloud each Sunday. <b>A year later</b> she dies at sunset, “of unclear causes”. <i>Only if the PCs really missed a copy:</i> the same evening, a private screening in a house in Bel Air.</p></div>
-    <div class="box"><h3>Mercy</h3><p class="small" style="margin:0">A pillow, a pistol, or a door left open on a cold mountain night. Across the country, forty cans of film are just film. Someone has to tell Ma and Pa Vale. Pell burns the notebook and is gone by morning; the raw negative, wherever it ended up, is only film now.</p></div>
+    <div class="box"><h3>Ashes</h3><p class="small" style="margin:0">Every can burned. Evelyn is moved to a sanatorium; Thomas reads her letters aloud each Sunday. Every evening at dusk she still hums the waltz. <b>A year later</b> she dies at sunset, “of unclear causes”. <i>Only if the PCs really missed a copy:</i> the same evening, a private screening in a house in Bel Air.</p></div>
+    <div class="box"><h3>Mercy</h3><p class="small" style="margin:0">A pillow, a pistol, or a door left open on a cold mountain night. Across the country, forty cans of film are just film. Whitcomb says, later, that she looked as if she'd taken off a mask. Someone has to tell Ma and Pa Vale. Pell takes the notebook and is gone by morning — looking for the next Cross; the raw negative, wherever it ended up, is only film now.</p></div>
     <div class="box red"><h3>Opening Night</h3><p class="small" style="margin:0">Montage: cans unloaded in San Francisco, Portland, Denver, Chicago, Miami, New York. Ushers. A string quartet's waltz. The lights go down. Fade to black on a headline.</p></div>
   </div>
   <div class="dark">
     <div class="kicker">Table Content Boundaries</div>
     <p class="small" style="margin:1mm 0 0"><b>Theme:</b> sexual exploitation in early Hollywood — name it before play. <b>Never depicted:</b> sexual acts or abuse; PCs are never participants. <b>Off-screen:</b> audiences' madness. <b>Ask first:</b> whether a mercy killing is narrated or faded out.</p>
   </div>
-  <p class="small muted"><b>GM notes:</b> Period detail is fictionalised. The Silver Circle, Imperial Pictures, <i>Queen of the Nile</i> and the showman are invented; the showman nods to Lovecraft's prose poem “Nyarlathotep”.</p>
+  <p class="small muted"><b>GM notes:</b> Period detail is fictionalised. The Silver Circle, Imperial Pictures, <i>Queen of the Nile</i> and the showman are invented; Carcosa, Lake Hali, Cassilda's Song, the Pallid Mask and the King in Yellow come from Robert W. Chambers, <i>The King in Yellow</i> (1895).</p>
 </section>
 <!-- ============ APPENDIX ============ -->
 <section class="page appx" id="clue-map">
@@ -1309,7 +1384,7 @@ body.present #present-x{display:block}
   <h1>NPCs: Studio, Circle & Law</h1>
 
   <p class="muted" style="margin-bottom:2mm">Who knows what, wants what, and can do what. <b>Lever</b> means what makes Convince possible. <b>Turns up at</b> suggests scenes where the NPC can walk on.</p>
-  <table class="idx npcx"><colgroup><col style="width:17%"><col style="width:21%"><col style="width:21%"><col style="width:23%"><col style="width:18%"></colgroup><tr><th>NPC</th><th>Knows</th><th>Wants · Lever</th><th>Can do</th><th>Turns up at</th></tr><tr><td class="nm"><b><a href="#npc-cross">Nathaniel Cross</a></b><span>VP production · Circle leader</span></td><td>Everything: the rite, the anchor, every copy, Bell's murder.</td><td>40 cinemas, his seat “in the dark theatre”, Evelyn kept breathing. <b>Lever:</b> his ego (he gloats, giving 08); fear of Kalb; his heart.</td><td>Runs the Amber Clock: charm, tailored bribes, lawyers, police, finally Dugan. Invites the PCs in and has them photographed at the Masque.</td><td class="tu"><a href="#loc-mansion">Mansion</a> · <a href="#loc-kalb">Kalb</a> · <a href="#loc-depot">Central Station</a> (in a black Lincoln) · phones Vivienne at Amber 1, Thomas when he gloats</td></tr><tr><td class="nm"><b><a href="#npc-pell">Dr. Ignatius Pell</a></b><span>Occultist · translator · successor</span></td><td>Everything. The showman, the rite (05), the anchor (08), every copy. Rings the lodge at 7 each evening as “Dr. Pell”.</td><td>An audience for his learning; the rite fulfilled. <b>Lever:</b> vanity; terror of Cross; he is no physician.</td><td>Explains everything when flattered. Carries the negative to the lab after the Masque and runs the swap on Sunday. Under pressure, confirms the copies but warns Cross on a 7–9. Keeps a journal of the vessel.</td><td class="tu"><a href="#loc-mansion">Mansion</a> (library, west salon) · <a href="#loc-lab">Film Lab</a> (Sat midnight, Sun swap) · <a href="#loc-depot">Central Station</a></td></tr><tr><td class="nm"><b><a href="#npc-bentham">Walter Bentham</a></b><span>Studio attorney</span></td><td>Hush money to two earlier young women, the Circle's existence. Not the curse. Told the police Evelyn is on vacation.</td><td>No scandal reaches Imperial. <b>Lever:</b> drafted Evelyn's leave of absence without her signature.</td><td>Trespass letters, injunctions, writs, seized documents (Amber 3). A kidnapping complaint if they take Evelyn.</td><td class="tu"><a href="#loc-lot">Imperial Lot</a> · <a href="#loc-kalb">Kalb</a> · phones <a href="#loc-office">Mercer's Office</a> · on the PCs' doorsteps</td></tr><tr><td class="nm"><b><a href="#npc-roth">Samuel Roth</a></b><span>Publicity chief</span></td><td>What he has covered up: the Circle's nights, Evelyn, Bell. Issued the press kit (09).</td><td>Evelyn and Bell kept out of the papers. <b>Lever:</b> fear that Kalb learns what he hid.</td><td>Hands out the press kit and the “tragic accident” line. Kills stories, leaks smears, calls Billy's editor (Amber +1).</td><td class="tu"><a href="#loc-lot">Imperial Lot</a> · <a href="#loc-mansion">Mansion</a> · Billy's editor's phone</td></tr><tr><td class="nm"><b><a href="#npc-kalb">Morris Kalb</a></b><span>Head of Imperial Pictures</span></td><td>Nothing occult. The release schedule (10). Not that his wife is in the Circle.</td><td>His summer picture on time; Delphine's name out of everything. <b>Lever:</b> Delphine; proof of murder.</td><td>Knows only the decoy. Convinced: burns the lab's stock (decoys; the real prints only if the PCs name the “N.C. private” order), guards the shipping room on Sunday, and after the train wires the exchanges. Cross keeps the work print and learns at once (Amber +2).</td><td class="tu"><a href="#loc-kalb">Kalb</a> (Sunday morning) · <a href="#loc-lab">Film Lab</a> (if he orders the burn)</td></tr><tr id="x-delphine" ><td class="nm"><b>Delphine Kalb</b><span>Kalb's wife · Circle member</span></td><td>The Circle from inside (04): who comes, what happens, the cameras.</td><td>Nobody recognises her. <b>Lever:</b> exposure, to her husband above all.</td><td>Confirms the Circle in private. Her secret is the PCs' best lever on Kalb.</td><td class="tu"><a href="#loc-mansion">Mansion</a> (masked) · <a href="#loc-kalb">Kalb</a> (Sunday breakfast table)</td></tr><tr id="x-members" ><td class="nm"><b>Sen. Harlan Pryce · Teddy Marsh</b><span>Circle members</span></td><td>The rites, not the curse. Cross has them on film.</td><td>To stay anonymous. <b>Lever:</b> Vivienne knows their faces; the reels in Cross's safe.</td><td>Pryce makes calls: the Commissioner, the DA, a judge. Marsh just runs.</td><td class="tu"><a href="#loc-mansion">Mansion</a> (Pryce leads a young actress upstairs)</td></tr><tr><td class="nm"><b><a href="#npc-commissioner">Hal Brannigan</a></b><span>Police Commissioner · bought</span></td><td>Was paid to close Bell's case. Nothing occult.</td><td>Distance from anything that smells of murder. <b>Lever:</b> proof that murder could stick to him.</td><td>Police obstruction, false arrest (Amber 3–5), a search for the car if they take Evelyn. Drops Cross when the murder can be proved.</td><td class="tu">never in person; Malloy's warnings, a raid on <a href="#loc-office">Mercer's Office</a></td></tr><tr id="x-hooper" ><td class="nm"><b>Earl Hooper</b><span>Studio driver assigned to Cross</span></td><td>Drove Evelyn to the party and, that night, to the lodge (06). Knows which studio cars bring which young women (04). Drives Pell to the lab Saturday midnight and Sunday at four (10). Out driving Cross on Friday; calls back Saturday morning.</td><td>His job; no kidnapping charge. <b>Lever:</b> money, that fear, his conscience — and Rosa.</td><td>Gives the route, the gate and the dogs. Can drive the PCs there. The garage book contradicts any lie.</td><td class="tu"><a href="#loc-lot">Imperial Lot</a> (studio garage, from Sat am) · <a href="#loc-mansion">Mansion</a> garage · the swap at <a href="#loc-lab">Film Lab</a> · gone to Palm Springs at Amber 4</td></tr><tr id="x-mabel" ><td class="nm"><b>Mabel Stokes</b><span>Maid at the mansion</span></td><td>The house: the west salon, the household office, the hat-box under the projector; Pell telling Hooper “the lab at four on Sunday” (10). She has seen the young women leave at dawn.</td><td>Her job, and to stop being part of it. <b>Lever:</b> sympathy; a Police Bribe.</td><td>Opens the service door, lends an apron, shows the household office and the cabinet.</td><td class="tu"><a href="#loc-mansion">Mansion</a> (by day and at the Masque)</td></tr><tr id="x-finch" ><td class="nm"><b>Harold Finch</b><span>Lab supervisor</span></td><td>The decoy order, the ledger (09) — and the “N.C. private” order his night shift prints on Saturday without projecting it. The Sunday shipment (10), the cheque to Mount Calvary.</td><td>The job done by Sunday, no questions about Ruth. Afraid of the reel. <b>Lever:</b> a Police Bribe; Kalb finding out.</td><td>Opens or seals the vault. Can stall the printer, tip off the PCs about Saturday night, or call security. Looks away during the swap.</td><td class="tu"><a href="#loc-lab">Film Lab</a> · escorts the cans to <a href="#loc-depot">Central Station</a></td></tr></table>
+  <table class="idx npcx"><colgroup><col style="width:17%"><col style="width:21%"><col style="width:21%"><col style="width:23%"><col style="width:18%"></colgroup><tr><th>NPC</th><th>Knows</th><th>Wants · Lever</th><th>Can do</th><th>Turns up at</th></tr><tr><td class="nm"><b><a href="#npc-cross">Nathaniel Cross</a></b><span>VP production · Circle leader · in a wheelchair</span></td><td>Everything: the rite, the anchor, every copy, Bell's murder.</td><td>40 cinemas, his seat “in the dark theatre”, Evelyn kept breathing. <b>Lever:</b> his ego (he gloats, giving 08); being seen weak; his body — thirty years of MS, a wheelchair.</td><td>Runs the Amber Clock: charm, tailored bribes, lawyers, police, finally Dugan. Invites the PCs in and has them photographed at the Masque.</td><td class="tu"><a href="#loc-mansion">Mansion</a> · <a href="#loc-kalb">Kalb</a> · <a href="#loc-depot">Central Station</a> (in a black Lincoln) · phones Vivienne at Amber 1, Thomas when he gloats</td></tr><tr><td class="nm"><b><a href="#npc-pell">Dr. Ignatius Pell</a></b><span>Occultist · the real believer</span></td><td>Everything — and more than Cross: the Showman, the play, the rite (05), the anchor (08), every copy, what Ashes does to Evelyn. Rings the lodge at 7 as “Dr. Pell”.</td><td>The Showman's return — and to be named his successor. <b>Lever:</b> vanity; terror of Cross; the second act; he is no physician.</td><td>Explains everything when flattered. Carries the negative to the lab after the Masque and runs the swap on Sunday. Under pressure, confirms the copies but warns Cross on a 7–9. Keeps a journal of the vessel.</td><td class="tu"><a href="#loc-mansion">Mansion</a> (library, west salon) · <a href="#loc-lab">Film Lab</a> (Sat midnight, Sun swap) · <a href="#loc-depot">Central Station</a></td></tr><tr><td class="nm"><b><a href="#npc-bentham">Walter Bentham</a></b><span>Studio attorney</span></td><td>Hush money to two earlier young women, the Circle's existence. Not the curse. Told the police Evelyn is on vacation.</td><td>No scandal reaches Imperial. <b>Lever:</b> drafted Evelyn's leave of absence without her signature.</td><td>Trespass letters, injunctions, writs, seized documents (Amber 3). A kidnapping complaint if they take Evelyn.</td><td class="tu"><a href="#loc-lot">Imperial Lot</a> · <a href="#loc-kalb">Kalb</a> · phones <a href="#loc-office">Mercer's Office</a> · on the PCs' doorsteps</td></tr><tr><td class="nm"><b><a href="#npc-roth">Samuel Roth</a></b><span>Publicity chief</span></td><td>What he has covered up: the Circle's nights, Evelyn, Bell. Issued the press kit (09).</td><td>Evelyn and Bell kept out of the papers. <b>Lever:</b> fear that Kalb learns what he hid.</td><td>Hands out the press kit and the “tragic accident” line. Kills stories, leaks smears, calls Billy's editor (Amber +1).</td><td class="tu"><a href="#loc-lot">Imperial Lot</a> · <a href="#loc-mansion">Mansion</a> · Billy's editor's phone</td></tr><tr><td class="nm"><b><a href="#npc-kalb">Morris Kalb</a></b><span>Head of Imperial Pictures</span></td><td>Nothing occult. The release schedule (10). Not that his wife is in the Circle.</td><td>His summer picture on time; Delphine's name out of everything. <b>Lever:</b> Delphine; proof of murder.</td><td>Knows only the decoy. Convinced: burns the lab's stock (decoys; the real prints only if the PCs name the “N.C. private” order), guards the shipping room on Sunday, and after the train wires the exchanges. Cross keeps the work print and learns at once (Amber +2).</td><td class="tu"><a href="#loc-kalb">Kalb</a> (Sunday morning) · <a href="#loc-lab">Film Lab</a> (if he orders the burn)</td></tr><tr id="x-delphine" ><td class="nm"><b>Delphine Kalb</b><span>Kalb's wife · Circle member</span></td><td>The Circle from inside (04): who comes, what happens, the cameras.</td><td>Nobody recognises her. <b>Lever:</b> exposure, to her husband above all.</td><td>Confirms the Circle in private. Her secret is the PCs' best lever on Kalb.</td><td class="tu"><a href="#loc-mansion">Mansion</a> (masked) · <a href="#loc-kalb">Kalb</a> (Sunday breakfast table)</td></tr><tr id="x-members" ><td class="nm"><b>Sen. Harlan Pryce · Teddy Marsh</b><span>Circle members</span></td><td>The rites, not the curse. Cross has them on film.</td><td>To stay anonymous. <b>Lever:</b> Vivienne knows their faces; the reels in Cross's safe.</td><td>Pryce makes calls: the Commissioner, the DA, a judge. Marsh just runs.</td><td class="tu"><a href="#loc-mansion">Mansion</a> (Pryce leads a young actress upstairs)</td></tr><tr><td class="nm"><b><a href="#npc-commissioner">Hal Brannigan</a></b><span>Police Commissioner · bought</span></td><td>Was paid to close Bell's case. Nothing occult.</td><td>Distance from anything that smells of murder. <b>Lever:</b> proof that murder could stick to him.</td><td>Police obstruction, false arrest (Amber 3–5), a search for the car if they take Evelyn. Drops Cross when the murder can be proved.</td><td class="tu">never in person; Malloy's warnings, a raid on <a href="#loc-office">Mercer's Office</a></td></tr><tr id="x-hooper" ><td class="nm"><b>Earl Hooper</b><span>Studio driver · Cross's legs</span></td><td>Drove Evelyn to the party and, that night, to the lodge (06). Knows which studio cars bring which young women (04). Drives Pell to the lab Saturday midnight and Sunday at four (10). Out driving Cross on Friday; calls back Saturday morning.</td><td>His job; no kidnapping charge. <b>Lever:</b> money, that fear, his conscience — and Rosa.</td><td>Gives the route, the gate and the dogs. Can drive the PCs there. The garage book contradicts any lie.</td><td class="tu"><a href="#loc-lot">Imperial Lot</a> (studio garage, from Sat am) · <a href="#loc-mansion">Mansion</a> garage · the swap at <a href="#loc-lab">Film Lab</a> · gone to Palm Springs at Amber 4</td></tr><tr id="x-mabel" ><td class="nm"><b>Mabel Stokes</b><span>Maid at the mansion</span></td><td>The house: the west salon, the household office, the hat-box under the projector; Pell telling Hooper “the lab at four on Sunday” (10). She has seen the young women leave at dawn.</td><td>Her job, and to stop being part of it. <b>Lever:</b> sympathy; a Police Bribe.</td><td>Opens the service door, lends an apron, shows the household office and the cabinet.</td><td class="tu"><a href="#loc-mansion">Mansion</a> (by day and at the Masque)</td></tr><tr id="x-finch" ><td class="nm"><b>Harold Finch</b><span>Lab supervisor</span></td><td>The decoy order, the ledger (09) — and the “N.C. private” order his night shift prints on Saturday without projecting it. The Sunday shipment (10), the cheque to Mount Calvary.</td><td>The job done by Sunday, no questions about Ruth. Afraid of the reel. <b>Lever:</b> a Police Bribe; Kalb finding out.</td><td>Opens or seals the vault. Can stall the printer, tip off the PCs about Saturday night, or call security. Looks away during the swap.</td><td class="tu"><a href="#loc-lab">Film Lab</a> · escorts the cans to <a href="#loc-depot">Central Station</a></td></tr></table>
 </section>
 <section class="page appx" id="npc-index2">
   <div class="kicker">Appendix C · Cast Index</div>
@@ -1348,8 +1423,8 @@ const KEY='masque-table-state-v1';
 let state={chk:[]};
 try{state=JSON.parse(localStorage.getItem(KEY))||state}catch(e){}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}};
-const TITLES={"background": "What Happened", "glance": "At a Glance", "truth": "Cross, Camera & Rite", "mechanism": "What Really Happened", "tracker": "Clocks & Tracker", "spine": "The Spine (start here)", "opening": "Opening Scene", "story": "The Story So Far", "moves": "Basic Moves", "pc-mercer": "PC \u00b7 Jack Mercer", "pc-billy": "PC \u00b7 Billy Mulligan", "pc-vivienne": "PC \u00b7 Vivienne Ashcroft", "pc-thomas": "PC \u00b7 Thomas Vale", "npc-cross": "NPCs \u00b7 Cross & Imperial", "npc-lodge": "NPCs \u00b7 The Lodge", "npc-mob": "NPCs \u00b7 Witnesses", "scenes": "Scenes I", "scenes2": "Scenes II", "lodge": "Blackwater Lodge", "clues": "Clue Web", "finale": "Final Act & Endings", "clue-map": "Clue Map", "clue-sources": "Clue Sources", "npc-index": "NPC Index I", "loc-index": "Locations I", "cover": "Home", "npc-index2": "NPC Index II", "loc-index2": "Locations II"};
-const PLAYER=new Set(["moves", "pc-billy", "pc-mercer", "pc-thomas", "pc-vivienne", "story"]);
+const TITLES={"background": "What Happened", "glance": "At a Glance", "truth": "Cross, Camera & Rite", "carcosa": "The Showman & Carcosa", "mechanism": "What Really Happened", "tracker": "Clocks & Tracker", "spine": "The Spine (start here)", "opening": "Opening Scene", "story": "The Story So Far", "moves": "Basic Moves", "pc-mercer": "PC \u00b7 Jack Mercer", "pc-billy": "PC \u00b7 Billy Mulligan", "pc-vivienne": "PC \u00b7 Vivienne Ashcroft", "pc-thomas": "PC \u00b7 Thomas Vale", "pell-journal": "Pell's Journal (handout)", "npc-cross": "NPCs \u00b7 Cross & Imperial", "npc-lodge": "NPCs \u00b7 The Lodge", "npc-mob": "NPCs \u00b7 Witnesses", "scenes": "Scenes I", "scenes2": "Scenes II", "lodge": "Blackwater Lodge", "clues": "Clue Web", "finale": "Final Act & Endings", "clue-map": "Clue Map", "clue-sources": "Clue Sources", "npc-index": "NPC Index I", "loc-index": "Locations I", "cover": "Home", "npc-index2": "NPC Index II", "loc-index2": "Locations II"};
+const PLAYER=new Set(["moves", "pc-billy", "pc-mercer", "pc-thomas", "pc-vivienne", "pell-journal", "story"]);
 let current=null;
 
 /* ---------- fit-to-width zoom ---------- */
